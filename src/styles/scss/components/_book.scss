@@ -1,0 +1,118 @@
+.book-wrap{
+    .inner{
+        @include flex(center, flex-start);
+        flex-direction: column;
+
+        .section-title{
+            margin-bottom: 24px;
+        }
+        .section-subtitle{
+            margin-bottom: 60px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .book-content--wrap{
+            position: relative;
+            @include flex(flex-end, space-between);
+            @include layout(100%, auto);
+
+            .book-content{
+                @include flex(flex-start, space-between);
+                flex-direction: column;
+                position: relative;
+                @include layout(31%, 300px);
+                padding: 60px;
+                background-color: #e7e7e7;
+                border-radius: 32px;
+                transition: all 0.6s;
+                overflow: hidden;
+
+                &:hover{
+                    height: 450px;
+                    background-color: $primary;
+                    color: #fff;
+
+                    .book-content__icon{
+                        background-color: transparent;
+                        border: 2px solid #fff;
+
+                        img{
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                    .book-content__bg{
+                        width: 160px;
+                    }
+                    .book-content__disc{
+                        opacity: 1;
+                    }
+                    .book-content__text{
+                        color: #fff;
+                    }
+                    .book-content__link{
+                        width: auto;
+                    }
+                }
+                &__bg{
+                    position: absolute;
+                    top: -20px;
+                    right: -20px;
+                    width: 0;
+                    transition: all 0.3s;
+                    overflow: hidden;
+
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                &__disc{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    @include font($ns, 16px, #fff);
+                    font-weight: 200;
+                    line-height: 1.6;
+                    transition: all 0.3s;
+                    opacity: 0;
+                }
+                &__icon{
+                    @include flex();
+                    @include layout(60px, 60px);
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
+                &__bot{
+                    @include flex(flex-end, space-between);
+                    @include layout(100%, auto);
+
+                    .book-content__text{
+                        @include font($ns, 18px);
+                        font-weight: 600;
+                        line-height: 1.6;
+                    }
+                    .book-content__link{
+                        width: 0;
+                        transition: all 0.3s;
+                        overflow: hidden;
+
+                        a{
+                            @include flex();
+                            gap: 6px;
+                            @include font($ns, 14px, #fff);
+                            font-weight: 500;
+                            transition: all 0.3s;
+
+                            &:hover{
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+                        }
+                        img{
+                            filter: brightness(0) invert(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

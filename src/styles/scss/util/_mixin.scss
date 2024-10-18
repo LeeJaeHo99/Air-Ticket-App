@@ -1,0 +1,28 @@
+@mixin flex($x: center, $y: center, $z: row){
+    display: flex;
+    align-items: $x;
+    justify-content: $y;
+    flex-direction: $z;
+}
+
+@mixin layout($x: auto, $y: auto){
+    width: $x;
+    height: $y;
+}
+
+@mixin font($x, $y, $z: #000){
+    font-family: $x;
+    font-size: $y;
+    color: $z;
+}
+
+@mixin border($x, $y, $z: 0px){
+    border: $x solid $y;
+    border-radius: $z;
+}
+
+@mixin ellipsis(){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

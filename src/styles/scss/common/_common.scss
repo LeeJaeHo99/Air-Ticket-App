@@ -1,0 +1,32 @@
+.inner{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+section{
+    margin-bottom: 150px;
+}
+
+.section-title{
+    margin-bottom: 20px;
+    @include font($ns, 36px);
+    font-weight: 700;
+}
+
+.section-subtitle{
+    @include font($ns, 16px, #959595);
+    font-weight: 400;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.text-input{
+    width: 50%;
+    max-width: 300px;
+    padding: 8px;
+    @include border(1px, #a5a5a5, 8px);
+    outline: none;
+}

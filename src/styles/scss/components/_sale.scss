@@ -1,0 +1,77 @@
+.sale-wrap{
+    .inner{
+        @include flex();
+        flex-direction: column; 
+        gap: 32px
+    }
+    &__top{
+        @include flex(center, flex-start);
+        gap: 32px;
+
+        .sale-wrap--img{
+            border-radius: 18px;
+        }
+        .sale-wrap--text{
+            @include layout(1068px, auto);
+
+            > div{
+                @include flex();
+                gap: 16px;
+                @include font($ns, 80px);
+                font-weight: 800;
+
+
+                span{
+                    width: 50%;
+                    @include font($ns, 16px, #ccc);
+                    line-height: 1.8;
+                }
+            }
+            &__mid{
+                margin: 16px 0 16px 0;
+                letter-spacing: 8.5px;
+            }
+        }
+    }
+    &__bot{
+        @include flex();
+        gap: 32px;
+
+        .sale-percent__box{
+            @include flex();
+            gap: 16px;
+            width: 400px;
+            height: 120px;
+            background-color: #f4f4f4;
+            border-radius: 18px;
+            @include font($ns, 32px, $primary);
+            font-weight: 700;
+
+            span{
+                @include font($ns, 16px, #a5a5a5);
+                line-height: 1.6;
+            }
+        }
+        .box2{
+            @include flex();
+            gap: 24px;
+            width: 1068px;
+            height: 120px;
+            transform: translateX(0px);
+            border-radius: 18px;
+            background-color: #ddd;
+            background: url('/images/home/sale/sale-bg2.jpg') no-repeat 50% 75%;
+            background-size: cover;
+            @include font($ns, 26px);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+
+            &:hover{
+                img{
+                    transform: translateX(10px);
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

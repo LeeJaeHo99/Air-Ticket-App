@@ -1,0 +1,31 @@
+footer{
+    @include layout(100%, 320px);
+        background-color: #eee;
+
+        .inner{
+            @include flex(center, space-between);
+            padding: 64px 0 64px 0;
+
+            .logo-wrap{
+                @include flex(flex-start, center);
+                flex-direction: column;
+                gap: 24px;
+                max-width: 250px;
+
+                .logo-top{
+                    @include flex();
+                    gap: 16px;
+
+                    .footer-logo{
+                        filter: grayscale(100%) brightness(0);
+                    }
+                    .company-name{
+                        @include font($ns, 24px, #000);
+                    }
+                }
+                .logo-bot{
+                    @include font($ns, 20px, #a5a5a5);
+                }
+            }
+        }
+}

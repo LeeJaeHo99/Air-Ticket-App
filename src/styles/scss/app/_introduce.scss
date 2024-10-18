@@ -1,0 +1,76 @@
+.introduce-page--wrap{
+    margin-top: 48px;
+
+    .inner{
+        @include layout(100%, auto);
+
+        .introduce-top{
+            @include flex();
+            gap: 24px;
+            @include layout(100%, 500px);
+            margin-bottom: 24px;
+
+            .introduce-left{
+                @include layout(70%, 100%);
+    
+                img{
+                    width: 100%;
+                    border-radius: 16px;
+                }
+            }
+            .introduce-right{
+                @include flex(center, flex-start);
+                flex-direction: column;
+                gap: 24px;
+                @include layout(30%, 100%);
+    
+                img{
+                    @include layout(100%, 50%);
+                    border-radius: 16px;
+                    box-shadow: 0px 0px 20px 0px #00000010;
+                }
+                .introduce-country{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    @include layout(100%, 50%);
+                    padding: 36px;
+                    background-color: #e7e7e795;
+                    border-radius: 16px;
+    
+                    > h3{
+                        @include flex(center, flex-start);
+                        gap: 16px;
+                        @include layout(100%, auto);
+                        margin-bottom: 12px;
+    
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        p{
+                            @include font($ns, 24px);
+                        }
+                        span{
+                            @include font($ns, 18px, $primary);
+                        }
+                    }
+                }
+            }
+        }
+        .introduce-bot{
+            @include flex();
+            @include layout(100%, 200px);
+            background: url('/images/introduce/sky-bg.jpg') no-repeat 50% 60%;
+            background-size: cover;
+            border-radius: 16px;
+            transition: all 2s ease-in-out;
+            @include font($ns, 24px, #fff);
+            cursor: pointer;
+            
+            &:hover{
+                background-position-y: 80%;
+            }
+        }
+    }
+}

@@ -1,0 +1,1254 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 36px;
+  color: #000;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #959595;
+  font-weight: 400;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.text-input {
+  width: 50%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #a5a5a5;
+  border-radius: 8px;
+  outline: none;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.introduce-page--wrap {
+  margin-top: 48px;
+}
+.introduce-page--wrap .inner {
+  width: 100%;
+  height: auto;
+}
+.introduce-page--wrap .inner .introduce-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 24px;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-left {
+  width: 70%;
+  height: 100%;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-left img {
+  width: 100%;
+  border-radius: 16px;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 24px;
+  width: 30%;
+  height: 100%;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right img {
+  width: 100%;
+  height: 50%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.062745098);
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right .introduce-country {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  padding: 36px;
+  background-color: rgba(231, 231, 231, 0.5843137255);
+  border-radius: 16px;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right .introduce-country > h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right .introduce-country > h3:last-child {
+  margin-bottom: 0;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right .introduce-country > h3 p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #000;
+}
+.introduce-page--wrap .inner .introduce-top .introduce-right .introduce-country > h3 span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #379DF1;
+}
+.introduce-page--wrap .inner .introduce-bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  background: url("/images/introduce/sky-bg.jpg") no-repeat 50% 60%;
+  background-size: cover;
+  border-radius: 16px;
+  transition: all 2s ease-in-out;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.introduce-page--wrap .inner .introduce-bot:hover {
+  background-position-y: 80%;
+}
+
+.book-page--wrap {
+  margin-top: 48px;
+}
+.book-page--wrap .inner {
+  width: 100%;
+  height: 1200px;
+}
+.book-page--wrap .inner .section-title {
+  margin-bottom: 40px;
+}
+.book-page--wrap .inner .section-title span {
+  font-size: 18px;
+  color: #a5a5a5;
+  text-decoration: underline;
+  text-decoration-color: #a5a5a5;
+}
+.book-page--wrap .inner .content-wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+}
+.book-page--wrap .inner .book-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 40px;
+}
+.book-page--wrap .inner .book-content__left {
+  width: 70%;
+  height: 100%;
+  padding: 48px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1254901961);
+}
+.book-page--wrap .inner .book-content__left .content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-direction: column;
+}
+.book-page--wrap .inner .book-content__left .content-wrap .flight-way {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+}
+.book-page--wrap .inner .book-content__left .content-wrap .flight-way span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #000;
+}
+.book-page--wrap .inner .book-content__left .content-wrap canvas {
+  width: 75% !important;
+  height: 75% !important;
+}
+.book-page--wrap .inner .book-content__left .content-wrap .booking-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 20%;
+  height: 56px;
+  background-color: #379DF1;
+  border-radius: 12px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.book-page--wrap .inner .book-content__left .content-wrap .booking-btn:hover {
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2509803922);
+}
+.book-page--wrap .inner .book-content__right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 16px;
+  width: 30%;
+  height: 100%;
+  padding: 60px 24px 24px 24px;
+  background-color: #e7e7e7;
+  border-radius: 12px;
+}
+.book-page--wrap .inner .book-content__right-title {
+  width: 100%;
+  height: 36px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  height: calc(100% - 36px);
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket:before, .book-page--wrap .inner .book-content__right .ticket-wrap .ticket:after {
+  content: "";
+  position: absolute;
+  bottom: 80px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket:before {
+  left: -16px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket:after {
+  right: -16px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-direction: column;
+  position: relative;
+  padding: 24px;
+  padding-bottom: 0px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .airplane-name--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 16px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .airplane-name--wrap .airplane-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 60px;
+  height: 60px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .airplane-name--wrap .airplane-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: auto;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  height: 120px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .departure, .book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .arrival {
+  width: 50%;
+  height: 100%;
+  padding: 20px 16px;
+  background-color: rgba(240, 240, 240, 0.5647058824);
+  border-radius: 12px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .departure .title, .book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .arrival .title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .departure .time, .book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .arrival .time {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 22px;
+  color: #000;
+  font-weight: 700;
+  margin: 14px 0 10px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .departure .date, .book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-time--wrap .arrival .date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 4px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-disc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  height: 80px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-disc > div {
+  width: 33.3333333333%;
+  height: 100%;
+  padding: 16px;
+  background-color: rgba(240, 240, 240, 0.5647058824);
+  border-radius: 12px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-disc > div > span {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 22px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__top .ticket-disc--wrap .ticket-disc > div > div {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+.book-page--wrap .inner .book-content__right .ticket-wrap .ticket .content-wrap__bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  border-top: 1px dashed #ddd;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #a5a5a5;
+  cursor: pointer;
+}
+
+.admin-wrap {
+  width: 100%;
+  height: auto;
+}
+.admin-wrap .section-subtitle {
+  margin-bottom: 24px;
+}
+.admin-wrap .admin-content--wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+}
+.admin-wrap .admin-left {
+  width: 20%;
+  height: auto;
+  padding: 36px;
+  background-color: rgba(55, 157, 241, 0.1882352941);
+  border-radius: 16px;
+}
+.admin-wrap .admin-left ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.admin-wrap .admin-left ul li {
+  position: relative;
+  padding-left: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+.admin-wrap .admin-left ul li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #379DF1;
+  border-radius: 50%;
+}
+.admin-wrap .admin-left ul li a {
+  transition: all 0.3s;
+}
+.admin-wrap .admin-left ul li a:hover {
+  color: #295;
+}
+.admin-wrap .admin-right {
+  width: 80%;
+  height: auto;
+  min-height: 500px;
+  padding: 36px;
+  background-color: #e7e7e7;
+  border-radius: 16px;
+}
+.admin-wrap .admin-right .section-subtitle {
+  font-size: 32px;
+  color: #379DF1;
+}
+.admin-wrap .admin-right .destination-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.admin-wrap .admin-right .destination-left, .admin-wrap .admin-right .destination-right {
+  width: 50%;
+  height: 100%;
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.admin-wrap .admin-right .destination-left ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.admin-wrap .admin-right .destination-left ul li {
+  position: relative;
+  padding-left: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+.admin-wrap .admin-right .destination-left ul li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #379DF1;
+  border-radius: 50%;
+}
+.admin-wrap .admin-right .destination-right form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.admin-wrap .admin-right .destination-right form label:last-child {
+  margin-bottom: 0;
+}
+.admin-wrap .admin-right .destination-right form label span {
+  color: #379DF1;
+}
+.admin-wrap .admin-right .btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 40px;
+}
+.admin-wrap .admin-right .btn-wrap button {
+  width: 120px;
+  height: 40px;
+  border: 0 solid #000;
+  border-radius: 8px;
+  background-color: rgba(55, 157, 241, 0.3137254902);
+  color: #000;
+  cursor: pointer;
+}
+
+.link-wrap {
+  margin: 30px 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.062745098);
+}
+header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+header .inner .logo {
+  width: 350px;
+  cursor: pointer;
+}
+header .inner nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+}
+header .inner nav ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #000;
+  transition: all 0.2s;
+}
+header .inner nav ul li a:hover {
+  color: #379DF1;
+}
+header .inner .header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  width: 350px;
+}
+header .inner .header-right .manager-page--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+}
+header .inner .header-right .manager-page--link a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #000;
+  transition: all 0.2s;
+}
+header .inner .header-right .manager-page--link a:hover {
+  color: #379DF1;
+}
+header .inner .header-right .search-component {
+  position: relative;
+  width: 200px;
+  height: 36px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 18px;
+}
+header .inner .header-right .search-component button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/images/icon/search.png") no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+header .inner .header-right .search-component .search-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0px solid #fff;
+  border-radius: 80px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+header .inner .header-right .search-component .search-input:focus {
+  outline: none;
+}
+
+.main-content--wrap {
+  margin: 30px 0 90px 0;
+}
+.main-content--wrap .main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+.main-content--wrap .main-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.main-content--wrap .main-content .main-text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 96px;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.main-content--wrap .main-content .main-btn--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+}
+.main-content--wrap .main-content .main-btn--wrap .main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 24px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.main-content--wrap .main-content .main-btn--wrap .main-btn:hover {
+  background-color: #379DF1;
+  border: none;
+  box-shadow: 0px 0px 20px 0px rgba(146, 146, 146, 0.2509803922);
+}
+
+.destination-wrap .destination-top .section-subtitle {
+  margin-bottom: 60px;
+}
+.destination-wrap .destination-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  height: auto;
+}
+.destination-wrap .destination-bot .destination-box {
+  display: flex;
+  align-items: cneter;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
+}
+.destination-wrap .destination-bot .destination-box .destination-bg {
+  margin-bottom: 24px;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+.destination-wrap .destination-bot .destination-box .destination-bg:hover {
+  filter: grayscale(0.3);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1882352941);
+}
+.destination-wrap .destination-bot .destination-box .destination-disc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__left .city-disc {
+  margin-bottom: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 30px;
+  color: #000;
+  font-weight: 500;
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__left .city-name--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__left .city-name--wrap .city-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__right .grade-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100px;
+  height: 55px;
+  padding: 20px;
+  background-color: #379DF1;
+  border: 2px solid #379DF1;
+  border-radius: 120px;
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__right .grade-wrap img {
+  filter: brightness(0) invert(1);
+}
+.destination-wrap .destination-bot .destination-box .destination-disc__right .grade-wrap .grade {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.book-wrap .inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+}
+.book-wrap .inner .section-title {
+  margin-bottom: 24px;
+}
+.book-wrap .inner .section-subtitle {
+  margin-bottom: 60px;
+  text-align: center;
+  line-height: 1.6;
+}
+.book-wrap .inner .book-content--wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.book-wrap .inner .book-content--wrap .book-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-direction: column;
+  position: relative;
+  width: 31%;
+  height: 300px;
+  padding: 60px;
+  background-color: #e7e7e7;
+  border-radius: 32px;
+  transition: all 0.6s;
+  overflow: hidden;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover {
+  height: 450px;
+  background-color: #379DF1;
+  color: #fff;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__icon {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__icon img {
+  filter: brightness(0) invert(1);
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__bg {
+  width: 160px;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__disc {
+  opacity: 1;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__text {
+  color: #fff;
+}
+.book-wrap .inner .book-content--wrap .book-content:hover .book-content__link {
+  width: auto;
+}
+.book-wrap .inner .book-content--wrap .book-content__bg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.book-wrap .inner .book-content--wrap .book-content__bg img {
+  border-radius: 50%;
+}
+.book-wrap .inner .book-content--wrap .book-content__disc {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 200;
+  line-height: 1.6;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.book-wrap .inner .book-content--wrap .book-content__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot .book-content__text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot .book-content__link {
+  width: 0;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot .book-content__link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 6px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot .book-content__link a:hover {
+  font-size: 16px;
+  font-weight: 700;
+}
+.book-wrap .inner .book-content--wrap .book-content__bot .book-content__link img {
+  filter: brightness(0) invert(1);
+}
+
+.sale-wrap .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 32px;
+}
+.sale-wrap__top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 32px;
+}
+.sale-wrap__top .sale-wrap--img {
+  border-radius: 18px;
+}
+.sale-wrap__top .sale-wrap--text {
+  width: 1068px;
+  height: auto;
+}
+.sale-wrap__top .sale-wrap--text > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 80px;
+  color: #000;
+  font-weight: 800;
+}
+.sale-wrap__top .sale-wrap--text > div span {
+  width: 50%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.8;
+}
+.sale-wrap__top .sale-wrap--text__mid {
+  margin: 16px 0 16px 0;
+  letter-spacing: 8.5px;
+}
+.sale-wrap__bot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 32px;
+}
+.sale-wrap__bot .sale-percent__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  width: 400px;
+  height: 120px;
+  background-color: #f4f4f4;
+  border-radius: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 32px;
+  color: #379DF1;
+  font-weight: 700;
+}
+.sale-wrap__bot .sale-percent__box span {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #a5a5a5;
+  line-height: 1.6;
+}
+.sale-wrap__bot .box2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+  width: 1068px;
+  height: 120px;
+  transform: translateX(0px);
+  border-radius: 18px;
+  background-color: #ddd;
+  background: url("/images/home/sale/sale-bg2.jpg") no-repeat 50% 75%;
+  background-size: cover;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 26px;
+  color: #000;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.sale-wrap__bot .box2:hover img {
+  transform: translateX(10px);
+  transition: all 0.3s;
+}
+
+.trending-wrap .see-all--btn--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.trending-wrap .see-all--btn--wrap .see-all--btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 12px;
+  width: 96px;
+  height: 30px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+.trending-wrap .see-all--btn--wrap .see-all--btn img {
+  transition: all 0.3s;
+}
+.trending-wrap .see-all--btn--wrap .see-all--btn:hover img {
+  transform: translateX(3px);
+}
+.trending-wrap .trending-box--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+}
+.trending-wrap .trending-box--wrap .trending-box__bg {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 24px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+.trending-wrap .trending-box--wrap .trending-box__bg .like-btn {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+.trending-wrap .trending-box--wrap .trending-box .city-name {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #000;
+  font-weight: 600;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc {
+  width: 90%;
+  height: auto;
+  margin: 0 auto 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 8px;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .city-name,
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .country-name--wrap,
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .date-wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .country-name--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .country-name--wrap .country-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #a5a5a5;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .date-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-left .date-wrap .date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 12px;
+  color: #a5a5a5;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-right .before-price {
+  margin-bottom: 8px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #a5a5a5;
+  text-decoration: line-through;
+}
+.trending-wrap .trending-box--wrap .trending-box__disc .trending-box__disc-right .after-price {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #d44343;
+}
+
+.WalletAni {
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer {
+  width: 100%;
+  height: 320px;
+  background-color: #eee;
+}
+footer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 64px 0 64px 0;
+}
+footer .inner .logo-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 250px;
+}
+footer .inner .logo-wrap .logo-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+}
+footer .inner .logo-wrap .logo-top .footer-logo {
+  filter: grayscale(100%) brightness(0);
+}
+footer .inner .logo-wrap .logo-top .company-name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  color: #000;
+}
+footer .inner .logo-wrap .logo-bot {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #a5a5a5;
+}/*# sourceMappingURL=style.css.map */

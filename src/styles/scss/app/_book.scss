@@ -1,0 +1,205 @@
+.book-page--wrap {
+    margin-top: 48px;
+
+    .inner {
+        @include layout(100%, 1200px);
+
+        .section-title{
+            margin-bottom: 40px;
+
+            span{
+                font-size: 18px;
+                color: #a5a5a5;
+                text-decoration: underline;
+                text-decoration-color: #a5a5a5;
+            }
+        }
+        .content-wrap {
+            @include layout(100%, 100%);
+            background-color: #fff;
+            border-radius: 12px;
+        }
+        .book-content{
+            @include flex();
+            gap: 24px;
+            @include layout(100%, 50%);
+            margin-bottom: 40px;
+        }
+        .book-content__left {
+            @include layout(70%, 100%);
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px 3px #00000020;
+
+            .content-wrap{
+                @include flex(center, space-between);
+                flex-direction: column;
+
+                .flight-way{
+                    @include flex();
+                    gap: 24px;
+
+                    span{
+                        @include font($ns, 24px);
+                    }
+                }
+                canvas{
+                    width: 75% !important;
+                    height: 75% !important;
+                }
+                .booking-btn{
+                    @include flex();
+                    @include layout(20%, 56px);
+                    background-color: $primary;
+                    border-radius: 12px;
+                    @include font($ns, 24px, #fff);
+                    transition: all 0.3s;
+                    cursor: pointer;
+
+                    &:hover{
+                        box-shadow: 0px 0px 20px 1px #00000040;
+                    }
+                }
+            }
+        }
+        .book-content__right {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            gap: 16px;
+            @include layout(30%, 100%);
+            padding: 60px 24px 24px 24px;
+            background-color: #e7e7e7;
+            border-radius: 12px;
+
+            &-title {
+                @include layout(100%, 36px);
+                @include font($ns, 20px);
+                font-weight: 600;
+            }
+            .ticket-wrap {
+                @include flex();
+                gap: 24px;
+                width: 100%;
+                height: calc(100% - 36px);
+
+                .ticket {
+                    position: relative;
+                    @include layout(100%, 100%);
+
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 80px;
+                        z-index: 1;
+                        @include layout(32px, 32px);
+                        background-color: #e7e7e7;
+                        border-radius: 50%;
+                    }
+                    &:before {
+                        left: -16px;
+                    }
+                    &:after {
+                        right: -16px;
+                    }
+                    .content-wrap {
+                        @include flex(flex-start, space-between);
+                        flex-direction: column;
+                        position: relative;
+                        padding: 24px;
+                        padding-bottom: 0px;
+
+                        &__top {
+                            width: 100%;
+                            height: calc(100% - 100px);
+
+                            .airplane-name--wrap {
+                                @include flex(center, flex-start);
+                                gap: 16px;
+                                @include layout(100%, 64px);
+                                margin-bottom: 16px;
+
+                                .airplane-logo{
+                                    @include flex();
+                                    @include layout(60px, 60px);
+                                    background-color: #f0f0f0;
+                                    border-radius: 50%
+                                }
+                                .airplane-name{
+                                    @include font($ns, 20px);
+                                    font-weight: 500;
+                                }
+                            }
+                            .ticket-disc--wrap{
+                                @include flex();
+                                flex-direction: column;
+                                gap: 16px;
+                                @include layout(100%);
+
+                                .ticket-time--wrap{
+                                    @include flex();
+                                    gap: 16px;
+                                    @include layout(100%, 120px);
+
+                                    .departure, .arrival{
+                                        @include layout(50%, 100%);
+                                        padding: 20px 16px;
+                                        background-color: #f0f0f090;
+                                        border-radius: 12px;
+
+                                        .title{
+                                            @include font($ns, 16px);
+                                            font-weight: 500;
+                                        }
+                                        .time{
+                                            @include font($ns, 22px);
+                                            font-weight: 700;
+                                            margin: 14px 0 10px;
+                                        }
+                                        .date{
+                                            @include flex(center, flex-start);
+                                            gap: 4px;
+                                            @include font($ns, 14px, #a5a5a5);
+                                        }
+                                    }
+                                }
+                                .ticket-disc{
+                                    @include flex();
+                                    gap: 16px;
+                                    @include layout(100%, 80px);
+
+                                    > div{
+                                        width: calc(100% / 3);
+                                        height: 100%;
+                                        padding: 16px;
+                                        background-color: #f0f0f090;
+                                        border-radius: 12px;
+
+                                        > span{
+                                            display: block;
+                                            @include font($ns, 22px);
+                                            font-weight: 700;
+                                            margin-bottom: 8px;
+                                        }
+                                        >div{
+                                            @include font($ns, 14px, #a5a5a5);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &__bot {
+                            @include flex();
+                            width: 90%;
+                            height: 100px;
+                            margin: auto;
+                            border-top: 1px dashed #ddd;
+                            @include font($ns, 20px, #a5a5a5);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

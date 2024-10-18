@@ -1,0 +1,104 @@
+.trending-wrap {
+    .see-all--btn--wrap {
+        @include flex(center, flex-end);
+        @include layout(100%, auto);
+        margin-bottom: 40px;
+
+        .see-all--btn {
+            @include flex();
+            gap: 12px;
+            @include layout(96px, 30px);
+            background-color: #fafafa;
+            @include border(1px, #ddd, 8px);
+            @include font($ns, 12px);
+            font-weight: 600;
+            cursor: pointer;
+
+            img {
+                transition: all 0.3s;
+            }
+            &:hover {
+                img {
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+    .trending-box--wrap {
+        @include flex(center, space-between);
+        gap: 16px;
+
+        .trending-box {
+            &__bg {
+                position: relative;
+                @include layout(350px, 350px);
+                margin-bottom: 24px;
+                background-color: #ddd;
+                border-radius: 20px;
+
+                .like-btn {
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                    cursor: pointer;
+                }
+            }
+            .city-name {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 16px;
+                @include font($ns, 24px);
+                font-weight: 600;
+            }
+            &__disc {
+                @include layout(90%, auto);
+                margin: 0 auto 32px;
+                @include flex(center, space-between);
+
+                .trending-box__disc-left{
+                    @include flex(center, flex-start);
+                    flex-direction: column;
+                    gap: 8px;
+
+                    .city-name,
+                    .country-name--wrap,
+                    .date-wrap {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                    .country-name--wrap {
+                        @include flex(center, flex-start);
+                        gap: 8px;
+    
+                        .country-name {
+                            @include font($ns, 12px, #a5a5a5);
+                        }
+                    }
+                    .date-wrap {
+                        @include flex(center, flex-start);
+                        gap: 8px;
+    
+                        .date {
+                            @include flex(center, flex-start);
+                            @include font($ns, 12px, #a5a5a5);
+                        }
+                    }
+                }
+                .trending-box__disc-right{
+                    .before-price, after-price{
+                        span{
+                        }
+                    }
+                    .before-price{
+                        margin-bottom: 8px;
+                        @include font($ns, 16px, #a5a5a5);
+                        text-decoration: line-through;
+                    }
+                    .after-price{
+                        @include font($ns, 20px, #d44343);
+                    }
+                }
+            }
+        }
+    }
+}
