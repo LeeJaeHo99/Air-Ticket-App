@@ -1,16 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { connectDB } from '@/library/mongodb';
 
 export default async function DestinationBox() {
     let destination = [];
     let randomDestination = [];
 
     try{
-        const db = (await connectDB).db('air-ticket');
-        const collection = db.collection('recommend');
-        destination = await collection.find({}).toArray();
+        const response = await fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/api/recommend`,
+            {cache: 'force-cache'}
+        );
+        const result = await response.json();
+        console.log('result: ', result);
 
+        if (result.success) {
+            destination = result.data;
+        } else {
+            throw new Error(result.error);
+        }
         function getRandomDestination(arr, num) {
             const shuffled = [...arr].sort(() => 0.5 - Math.random());
             return shuffled.slice(0, num);
